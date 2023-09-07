@@ -20,7 +20,7 @@ from . import views as v
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('pchsAdmin/', v.index),
+    path('pchsAdmin/', v.index,name='useradmin'),
      path('insert/', v.insert,name='cat_insert'),
     
 ]
