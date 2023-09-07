@@ -5,7 +5,7 @@ def insert(request):
     cat_name = request.POST.get('user_name')
     email = request.POST.get('email')
     password = request.POST.get('password')
-    password = request.POST.get('com_password')
+    com_password = request.POST.get('com_password')
     number = request.POST.get('number')
-    
-    return HttpResponse(cat_name)
+    show = [cat_name, email, password, com_password, number]
+    return HttpResponse(show)
