@@ -1,4 +1,4 @@
-from pyexpat.errors import messages
+from django.contrib import messages
 from django.shortcuts import HttpResponse, render, redirect
 from .models import User_Name
 def index(request):
@@ -17,7 +17,7 @@ def insert(request):
     user_obje.com_password = com_password
     user_obje.number = number
     user_obje.save()
-    messages.succes(request, 'Thank You')
+    messages.success(request, 'Thank You')
     return redirect('useradmin')
 
 

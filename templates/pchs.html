@@ -250,9 +250,9 @@
             <div class="col-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  {% if Messages %}
+                  {% if messages %}
                   <ul class="messages">
-                  {% for message is messages %}
+                  {% for message in messages %}
                   <li>
                     {{message}}
                   </li>
@@ -263,7 +263,7 @@
                   <form class="forms-sample" method="post" action="{% url 'cat_insert' %}">
                     {% csrf_token %}
                     <div class="form-group">
-                      <label for="exampleInputName1">user name</label>
+                      <label for="exampleInputName1">User Name</label>
                       <input type="text" class="form-control" id="exampleInputName1" placeholder="Name" name="user_name">
                       <label for="exampleInputName1">Email</label>
                       <input type="email" class="form-control" id="exampleInputName1" placeholder="Email" name="email">
