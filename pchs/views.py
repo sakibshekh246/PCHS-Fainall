@@ -25,6 +25,8 @@ def insert(request):
              messages.success(request, 'The phone number 1 must be 11')
         elif User_Name.objects.filter(user_name=cat_name).exists():
             messages.success(request, 'This value already exists.')
+        elif User_Name.objects.filter(email=email).exists():
+            messages.success(request, 'This Email already exists.')    
 
         else:   
             user_obje = User_Name()
