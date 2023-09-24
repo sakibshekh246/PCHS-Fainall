@@ -335,7 +335,7 @@
                           </td>
                           <td>
                             <a target="_blank" href="{% url 'edit_index'  i.id %}">Edit</a> 
-                             <a>Delete</a>
+                             <a href="{% url 'delete'  i.id %}">Delete</a>
                           </td>
                         </tr>
                         {% endfor %}

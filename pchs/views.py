@@ -87,4 +87,9 @@ def update(request):
     else:
           messages.success(request, 'fields can not be empty')
 
-    return redirect('useradmin')          
+    return redirect('useradmin')    
+
+def delete(request,id):
+    user_obje = User_Name.objects.get(id=id)
+    user_obje.delete()
+    return redirect('useradmin')     

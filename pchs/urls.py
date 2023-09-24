@@ -24,5 +24,6 @@ urlpatterns = [
     path('insert/', v.insert,name='cat_insert'),
     path('edit/<int:id>', v.edit_index,name='edit_index'),
     path('update/', v.update,name='cat_update'),
+    path('delete/<int:id>', v.delete,name='delete'),
     
 ]
