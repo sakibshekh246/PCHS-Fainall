@@ -28,6 +28,8 @@ SECRET_KEY = 'django-insecure-zt^)v1i$596%(aj&b_hn$b653qr*o)ppnrc+&gp(l9q8&k@ikp
 DEBUG = True
 
 ALLOWED_HOSTS = []
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 
 # Application definition
@@ -40,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pchs',
-    'Registration'
+    'Registration',
+    'ckeditor'
 ]
 
 MIDDLEWARE = [
