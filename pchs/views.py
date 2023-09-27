@@ -92,4 +92,8 @@ def update(request):
 def delete(request,id):
     user_obje = User_Name.objects.get(id=id)
     user_obje.delete()
+
+def registration_view(request):
+    return render(request, 'registration.html')
+
     return redirect('useradmin')     

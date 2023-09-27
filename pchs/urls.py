@@ -27,5 +27,8 @@ urlpatterns = [
     path('update/', v.update,name='cat_update'),
     path('delete/<int:id>', v.delete,name='delete'),
     path('registration/', include('Registration.urls')),
-    
+    path('pchsAdmin/registration.html', v.registration_view, name='registration'),
 ]
+
+    
+
