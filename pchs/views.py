@@ -39,7 +39,7 @@ def insert(request):
             user_obje.save()
             messages.success(request, 'Thank You')
     else:
-          messages.success(request, 'fields can not be empty')
+         messages.success(request, 'Fields can not be empty') 
 
 
     return redirect('useradmin')
