@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pchs',
     'Registration',
-    'ckeditor'
+    'ckeditor',
+    'Login'
 ]
 
 MIDDLEWARE = [
