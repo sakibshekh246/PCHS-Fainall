@@ -172,50 +172,10 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="../../index.html">
+            <a class="nav-link" href="">
               <i class="mdi mdi-home menu-icon"></i>
               <span class="menu-title">Dashboard</span>
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
-              aria-controls="ui-basic">
-              <i class="mdi mdi-circle-outline menu-icon"></i>
-              <span class="menu-title">UI Elements</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/buttons.html">Buttons</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/typography.html">Typography</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../../pages/forms/basic_elements.html">
-              <i class="mdi mdi-view-headline menu-icon"></i>
-              <span class="menu-title">Form elements</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../../pages/charts/chartjs.html">
-              <i class="mdi mdi-chart-pie menu-icon"></i>
-              <span class="menu-title">Charts</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../../pages/tables/basic-table.html">
-              <i class="mdi mdi-grid-large menu-icon"></i>
-              <span class="menu-title">Tables</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../../pages/icons/mdi.html">
-              <i class="mdi mdi-emoticon menu-icon"></i>
-              <span class="menu-title">Icons</span>
-            </a>
-          </li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="mdi mdi-account menu-icon"></i>
@@ -225,20 +185,10 @@
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="login.html"> Login </a></li>
-              
                 <li class="nav-item"> <a class="nav-link" href="registration.html"> Register </a></li>
-
                 <li class="nav-item"> <a class="nav-link" href="pchs.html"> User </a></li>
-              
               </ul>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../../documentation/documentation.html">
-              <i class="mdi mdi-file-document-box-outline menu-icon"></i>
-              <span class="menu-title">Documentation</span>
-            </a>
-          </li>
         </ul>
       </nav>
       <!-- partial -->
@@ -258,23 +208,41 @@
                     {% endfor %}
                   </ul>
                   {% endif %}
-                  <h4 class="card-title">User</h4>
-                  <form class="forms-sample" method="post" action="{% url 'cat_insert' %}">
+                  <h4 class="card-title">Login</h4>
+                  <form class="forms-sample" method="post" action=></form>
                     {% csrf_token %}
-                    <div class="form-group">
-                      <label for="exampleInputName1">User Name</label>
-                      <input type="text" class="form-control" id="exampleInputName1" placeholder="Name" name="user_name" required>
-                      <label for="exampleInputName1">Email</label>
-                      <input type="email" class="form-control" id="exampleInputName1" placeholder="Email" name="email" required>
-                      <label for="exampleInputName1">Password</label>
-                      <input type="password" class="form-control" id="exampleInputName1" placeholder="Password" name="password" required>
-                      <label for="exampleInputName1">Confarm Password</label>
-                      <input type="password" class="form-control" id="exampleInputName1" placeholder="Password" name="com_password" required>
-                      <label for="exampleInputName1">Phone Number</label>
-                      <input type="number" class="form-control" id="exampleInputName1" placehoglder="+880************" name="number" required>
+                
+                    <h4>Hello! let's get started</h4>
+                    <h6 class="font-weight-light">Login to continue.</h6>
+                    <form class="pt-3">
+                      <div class="form-group">
+                        <input type="text" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+                      </div>
+                      <div class="mt-3">
+                        <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="login.html">Login</a>
+                      </div>
+                      <div class="my-2 d-flex justify-content-between align-items-center">
+                        <div class="form-check">
+                          <label class="form-check-label text-muted">
+                            <input type="checkbox" class="form-check-input">
+                            Keep me signed in
+                          </label>
+                        </div>
+                        <a href="#" class="auth-link text-black">Forgot password?</a>
+                      </div>
+                    
+                      <div class="text-center mt-4 font-weight-light">
+                        Don't have an account? <a href="registration.html" class="text-primary">Create</a>
+                      </div>
+                    </form>
                     </div>
-                    <button type="submit" class="btn btn-primary me-2">Submit</button>
-
+                    </div>
+                    </div>
+                    </div>
+                    
                   </form>
                 </div>
               </div>
@@ -312,32 +280,32 @@
                         </tr>
                       </thead>
                       <tbody>
-                        {% for i in data %}
+                       
                         <tr class="table-info">
                           <td>
-                            {{forloop.counter}}
+                            
                           </td>
                           <td>
-                            {{i.user_name}}
+                        
                           </td>
                           <td>
-                            {{i.email}}
+                         
                           </td>
                           <td>
-                            {{i.password}}
+                         
                           </td>
                           <td>
-                            {{i.com_password}}
+                         
                           </td>
                           <td>
-                            {{i.number}}
+                            
                           </td>
                           <td>
-                            <a target="_blank" href="{% url 'edit_index'  i.id %}">Edit</a> 
-                             <a href="{% url 'delete'  i.id %}">Delete</a>
+                            
+                           
                           </td>
                         </tr>
-                        {% endfor %}
+                        
                       </tbody>
                     </table>
                   </div>
@@ -374,7 +342,14 @@
   <!-- endinject -->
   <!-- Custom js for this page-->
   <script src="{% static 'design/js/file-upload.js' %}"></script>
+  
+<script>
+  $(document).ready(function () {
+    console.log("Ok")
+  }) 
+</script>
   <!-- End custom js for this page-->
 </body>
 
 </html>
+

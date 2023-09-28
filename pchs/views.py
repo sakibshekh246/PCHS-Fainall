@@ -95,5 +95,8 @@ def delete(request,id):
 
 def registration_view(request):
     return render(request, 'registration.html')
+def login_view(request):
+    return render(request, 'login.html')
+
 
     return redirect('useradmin')     

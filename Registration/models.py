@@ -9,7 +9,7 @@ GENDER_CHOICES = (
 
 class Registration(models.Model):
     id = models.AutoField(primary_key=True)
- #user_id = models.ForeignKey('User_Name', on_delete=models.CASCADE, null=False,)
+    #user_id = models.ForeignKey('User_Name', on_delete=models.CASCADE, null=False,)
     user_name = models.CharField(max_length=200, default="0", unique=True)
     first_name = models.CharField(max_length=300, default="0")
     last_name = models.CharField(max_length=300, default="0")
