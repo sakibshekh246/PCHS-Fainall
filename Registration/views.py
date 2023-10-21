@@ -1,7 +1,7 @@
 from django.shortcuts import render,HttpResponse, render, redirect
 from django.contrib import messages
 from pchs.models import User_Name
-from .models import Registration
+from .models import Re
 # Create your views here.
 def index(request):
     user_data = {'data' : User_Name.objects.all()}
@@ -42,12 +42,12 @@ def insert(request):
             messages.error(request, 'Invalid gender selection')
         elif not(date_of_birth): 
             messages.error(request, 'Invalid date of birth format or value')
-        elif Registration.objects.filter(username=cat_name).exists():
+        elif Re.objects.filter(username=cat_name).exists():
                 messages.error(request, 'This username already exists.')
-        elif Registration.objects.filter(email=email).exists():
+        elif Re.objects.filter(email=email).exists():
                 messages.error(request, 'This Email already exists.')    
         else:
-            regis_obje = Registration()
+            regis_obje = Re()
             regis_obje.user_name = cat_name
             regis_obje.first_name = first_name
             regis_obje.last_name = last_name

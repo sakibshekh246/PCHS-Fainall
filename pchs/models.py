@@ -1,5 +1,5 @@
 from django.db import models
-#from Registration.models import Registration
+#from Registration.models import Re
 #from login.models import Login
 #from .models import User_Name
 
