@@ -18,6 +18,10 @@ import os
 temp_dir = os.path.join(BASE_DIR,'templates')
 static_dir = os.path.join(BASE_DIR,'static')
 
+#import pymysql
+
+#pymysql.install_as_MySQLdb()
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -43,8 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pchs',
     'Registration',
-    'ckeditor',
-    'Login'
+    #'ckeditor',
+    'login',
 ]
 
 MIDDLEWARE = [
@@ -89,6 +93,8 @@ DATABASES = {
         "PASSWORD" :'',
         "HOST":'localhost',
         "PORT": '3306'
+        #"OPTIONS": { 'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"}
+        
 
 
     }

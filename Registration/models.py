@@ -1,5 +1,7 @@
 from django.db import models
-from pchs.models import User_Name
+#from pchs.models import User_Name
+#from .models import Registration
+#from login.models import Login
 
 
 GENDER_CHOICES = (

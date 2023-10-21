@@ -1,7 +1,7 @@
 from django.db import models
-from Registration.models import Registration
-from pchs.models import User_Name
-
+#from Registration.models import Registration
+#from pchs.models import User_Name
+#from .models import Login
 
 class Login(models.Model):
     id = models.AutoField(primary_key=True)
