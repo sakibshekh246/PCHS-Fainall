@@ -30,7 +30,7 @@ urlpatterns = [
     path('pchsAdmin/registration.html', v.registration_view, name='registration'),
     #path('pchsAdmin/login.html', v.login_view, name='login'),
     path('pchsAdmin/pchs.html', v.index, name='cat_insert'),
-]
+]#+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
     
 

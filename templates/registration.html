@@ -208,7 +208,7 @@
                   </ul>
                   {% endif %}
                   <h4 class="card-title">Registration</h4>
-                  <form class="forms-sample" method="post" action=></form>
+                  <form class="forms-sample" method="post" action="{% url 'reg_insert' %}"></form>
                     {% csrf_token %}
                     <h4>New here?</h4>
                     <h6 class="font-weight-light">Registration is easy. It only takes a few steps</h6>
@@ -312,12 +312,13 @@
                         </tr>
                       </thead>
                       <tbody>
-                       
+                        {% for i in data %}
                         <tr class="table-info">
                           <td>
-                            
+                            {{forloop.counter}}
                           </td>
                           <td>
+                            {{i.user_name}}
                         
                           </td>
                           <td>
@@ -349,6 +350,7 @@
                            
                           </td>
                         </tr>
+                        {% endfor %}
                         
                       </tbody>
                     </table>

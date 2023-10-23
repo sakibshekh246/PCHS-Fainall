@@ -10,7 +10,7 @@ GENDER_CHOICES = (
    ('female', 'Female')
 )
 
-class Re(models.Model):
+class Registration(models.Model):
     
     id = models.AutoField(primary_key=True)
     #user_id = models.ForeignKey('User_Name', on_delete=models.CASCADE, null=False)

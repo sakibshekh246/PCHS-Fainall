@@ -1,7 +1,7 @@
 from django.shortcuts import render,HttpResponse, render, redirect
 from django.contrib import messages
 from pchs.models import User_Name
-from .models import Re
+from .models import Registration
 # Create your views here.
 def index(request):
     user_data = {'data' : User_Name.objects.all()}
