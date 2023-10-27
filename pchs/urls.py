@@ -29,7 +29,7 @@ urlpatterns = [
     path('registration/', include('Registration.urls')),
     path('pchsAdmin/registration.html', v.registration_view, name='registration'),
     #path('pchsAdmin/login.html', v.login_view, name='login'),
-    path('pchsAdmin/pchs.html', v.index, name='cat_insert'),
+    #path('pchsAdmin/pchs.html', v.index, name='cat_insert1'),
 ]#+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
     
