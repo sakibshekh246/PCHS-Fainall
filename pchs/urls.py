@@ -17,12 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from . import views as v
-import Registration
+from Registration.models import Registration
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('pchsAdmin/', v.index,name='useradmin'),
-    path('insert/', v.insert,name='cat_insert'),
+    path('insert/', v.insert, name='cat_insert'),
     path('edit/<int:id>', v.edit_index,name='edit_index'),
     path('update/', v.update,name='cat_update'),
     path('delete/<int:id>', v.delete,name='delete'),

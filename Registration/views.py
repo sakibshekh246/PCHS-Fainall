@@ -4,7 +4,7 @@ from pchs.models import User_Name
 from .models import Registration
 # Create your views here.
 def index(request):
-    user_data = {'data' : User_Name.objects.all()}
+    user_data = {'data' : Registration.objects.all()}
     return render(request, './registration.html',user_data)
 
 
@@ -42,12 +42,12 @@ def insert(request):
             messages.error(request, 'Invalid gender selection')
         elif not(date_of_birth): 
             messages.error(request, 'Invalid date of birth format or value')
-        elif Re.objects.filter(username=cat_name).exists():
+        elif Registration.objects.filter(username=cat_name).exists():
                 messages.error(request, 'This username already exists.')
-        elif Re.objects.filter(email=email).exists():
+        elif Registration.objects.filter(email=email).exists():
                 messages.error(request, 'This Email already exists.')    
         else:
-            regis_obje = Re()
+            regis_obje = Registration()
             regis_obje.user_name = cat_name
             regis_obje.first_name = first_name
             regis_obje.last_name = last_name
